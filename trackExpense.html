@@ -131,7 +131,11 @@
 
   <div class="content-overlay">
     <h1>Expense Tracker</h1>
-    
+    <div class="input-section">
+      <input type="text" id="category" placeholder="Category">
+      <input type="number" id="actual" placeholder="Actual Spent (₹)">
+      <button onclick="addExpense()">Add Expense</button>
+    </div>
 
     <table>
       <thead>
@@ -365,11 +369,11 @@ async function deleteExpense(expenseId) {
     // Save updated values when navigating away
     window.onbeforeunload = function () {
     localStorage.setItem("totalActual", initialSpent + expenses.reduce((sum, exp) => sum + exp.actual, 0));
-    localStorage.setItem  ("remainingBudget", totalBudget - (initialSpent + expenses.reduce((sum, exp) => sum + exp.actual, 0)));
+    localStorage.setItem("remainingBudget", totalBudget - (initialSpent + expenses.reduce((sum, exp) => sum + exp.actual, 0)));
 };
 
     function goToDashboard() {
-        window.location.href = "adminDashboard.html";
+        window.location.href = "organizerDashboard.html";
     }
     async function downloadExpenses() {
     try {

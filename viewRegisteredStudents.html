@@ -65,7 +65,7 @@
             const eventId = localStorage.getItem("currentEventId");
             if (!eventId) {
                 alert("No event selected!");
-                window.location.href = "adminDashboard.html";
+                window.location.href = "organizerDashboard.html";
                 return;
             }
 
@@ -103,7 +103,7 @@
         }
 
         function goBack() {
-            window.location.href = "adminDashboard.html";
+            window.location.href = "organizerDashboard.html";
         }
         function downloadStudents() {
     const eventId = localStorage.getItem("currentEventId");
